@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Zastosowanie steganografii do wymiany informacji na forum internetowym</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -52,22 +52,34 @@
                     <section>
                         <h3>Forum internetowe</h3>
                         <ul>
+                            <li class="fragment">użytkownicy</li>
                             <li class="fragment">posty</li>
 							<li class="fragment">tematy</li>
 							<li class="fragment">sekcje</li>
-							<li class="fragment">użytkownicy</li>
 							<li class="fragment">profil użytkownika</li>
 							<li class="fragment">role</li>
 							<li class="fragment">panel administracyjny</li>
                         </ul>
+                        <aside class="notes">
+                            <small>
+                                <ul>
+                                    <li>Struktura posta</li>
+                                    <li>Tematyka forum</li>
+                                </ul>
+                            </small>
+                        </aside>
                     </section>
                     
                     <section>
                         <h3>Tajny kanał komunikacji</h3>
-                        <ul>
-                            <li class="fragment">ukryty moduł steganograficzny</li>
-                            <li class="fragment">udostępniający dodatkową funkcjonalność</li>
-                        </ul>
+                        <p class="fragment">
+                            ukryty moduł steganograficzny
+                            udostępniający dodatkową funkcjonalność
+                        </p>
+                        <aside class="notes">
+                            <small>Niewidoczny dla normalnych użytkowników</small>
+                            <small>Niedostępny w kodzie aplikacji klienckiej</small>
+                        </aside>
                     </section>
                 </section>
                 
@@ -77,9 +89,9 @@
                     </section>
                     
                     <section>
+                        <h3>Bartosz Kostaniak</h3>
                         <ul>
                             <li>Implementacja modułu steganograficznego</li>
-                            <li>Implementacja projektu graficznego aplikacji</li>
                             <li>Zaprojektowanie struktur w bazie danych</li>
                             <li>Testy integracyjne</li>
                             <li>Testy jednostkowe</li>
@@ -87,12 +99,12 @@
                     </section>
                     
                     <section>
+                        <h3>Daniel Koza</h3>
                         <ul>
                             <li>Implementacja systemu uwierzytelniania i autoryzacji użytkowników</li>
-                            <li>Testy jednostkowe</li>
+                            <li>Zaprogramowanie podstawowej funkcjonalności forum internetowego</li>
                             <li>Testy funkcjonalne</li>
-                            <li>Implementacja podstawowej funkcjonalności forum internetowego</li>
-                            <li>Zaprojektowanie warstwy wizualnej aplikacji</li>
+                            <li>Testy jednostkowe</li>
                         </ul>
                     </section>
                 </section>
@@ -141,13 +153,25 @@
                     </section>
                     
                     <section>
-                        <h3 class="fragment">Algorytm <em>xorshift1024*</em></h3>
+                        <h3>Algorytm <em>xorshift1024*</em></h3>
                         <ul>
                             <li class="fragment">1024 bity stanu (ziarno)</li>
                             <li class="fragment">maksymalny okres 2<sup>1024</sup> - 1</li>
                         </ul>
-
+                        <aside class="notes">
+                            <small>Porzeba generatora z możliwością ustawiania ziarna</small>
+                            <small>oraz o dużym stanie i długim okresie</small>
+                        </aside>
                     </section>
+                    
+                    <section>
+                        <h3>Zabezpieczanie przed niepowołanym odczytem</h3>
+                        <ol>
+                            <li class="fragment">"zaszumianie" obrazu przed etapem kodowania wiadomości</li>
+                            <li class="fragment">skojarzenie z każdym obrazem w bazie wartości 1024-bitowej</li>
+                        </ol>
+                    </section>
+
 				</section>
 
 				<section>
@@ -160,14 +184,17 @@
                     </section>
                     
                     <section>
-						<h3>Możliwość rozbudowy</h2>
+						<h3>Możliwości rozbudowy</h2>
 						<ul>
-							<li class="fragment">panel administracyjny</li>
-							<li class="fragment">profil użytkownika</li>
-							<li class="fragment">statystyki</li>
+							<li class="fragment">użycie kryptografii</li>
+							<li class="fragment">wyodrębnienie modułu steganograficznego</li>
 						</ul>
 					</section>                    
 				</section>
+                
+                <section>
+                    <h1>Dziękujemy za uwagę</h1>
+                </section>
 
 			</div>
 
